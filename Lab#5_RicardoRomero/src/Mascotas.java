@@ -1,4 +1,5 @@
 
+import java.io.Serializable;
 import java.util.Date;
 
 /*
@@ -11,12 +12,14 @@ import java.util.Date;
  *
  * @author ricky
  */
-public class Mascotas {
+public class Mascotas implements Serializable{
     private String nombre;
     private String raza;
     private Date fecha;
     private String problema;
     private int numero_visitas;
+    
+    private static final long SerialVersionUID = 11L;
 
     public Mascotas() {
     }
@@ -71,7 +74,7 @@ public class Mascotas {
 
     @Override
     public String toString() {
-        return "Mascotas{" + "nombre=" + nombre + ", raza=" + raza + ", fecha=" + fecha + ", problema=" + problema + ", numero_visitas=" + numero_visitas + '}';
+        return nombre;
     }
     
 }

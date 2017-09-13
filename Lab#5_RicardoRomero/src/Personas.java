@@ -1,4 +1,5 @@
 
+import java.io.Serializable;
 import java.util.Date;
 
 /*
@@ -11,10 +12,12 @@ import java.util.Date;
  *
  * @author ricky
  */
-public class Personas {
+public class Personas  implements Serializable{
     private String ID;
     private Date fecha;
     private String nombre;
+    
+    private static final long SerialVersionUID = 10L;
 
     public Personas() {
     }    
@@ -51,7 +54,7 @@ public class Personas {
 
     @Override
     public String toString() {
-        return "Personas{" + "ID=" + ID + ", fecha=" + fecha + ", nombre=" + nombre + '}';
+        return nombre;
     }
     
 }
